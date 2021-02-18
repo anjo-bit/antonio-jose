@@ -9,8 +9,18 @@ def telaLogin():
     print("Bem vindo a melhor acaiteria da cidade!")
     print("--------------------------------------")
     print("Digite email e senha para continuar...")
-    email = input("Digite seu email: ")
-    senha = input("Digite sua senha: ")
+    try:
+      email = input("Digite seu email: ")
+    except:
+      print("email errado")
+    else:
+      print("email correto") 
+    try:
+      senha = input("Digite sua senha: ")
+    except:
+      print("senha errada")
+    else:
+      print("senha correta") 
     minhaConta = cliente.Cliente()
     role = minhaConta.fazerLogin(email, senha)
     if(role == 1):
