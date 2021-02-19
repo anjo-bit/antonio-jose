@@ -8,8 +8,11 @@ def telaInicial():
   print('1 - Login')
   print('2 - Cadastrar')
   option = input("Escolha uma das opções acima para continuar: ")
-  if(option == "1"):
-    tela_login.telaLogin()
-  elif(option == "2"):
-    tela_cadastro.telaCadastro()
+  try:
+    if(option == "1"):
+      tela_login.telaLogin()
+    elif(option == "2"):
+      tela_cadastro.telaCadastro()
+  except:
+    print('opcao incorreta')
   
