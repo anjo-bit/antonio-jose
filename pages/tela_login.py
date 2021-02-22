@@ -26,7 +26,7 @@ def telaLogin():
         tela_entregador.telaEntregador()
       elif(role == 3):
         tela_cliente.telaCliente(minhaConta)
-    except:
+    except ValueError:
       print('algo nao esta certo')
     finally:
       print('tudo ocorreu corretamente')
