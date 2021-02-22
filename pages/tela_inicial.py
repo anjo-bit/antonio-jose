@@ -13,6 +13,6 @@ def telaInicial():
       tela_login.telaLogin()
     elif(option == "2"):
       tela_cadastro.telaCadastro()
-  except:
+  except ValueError:
     print('opcao incorreta')
   
