@@ -26,19 +26,11 @@ class Usuario(object):
       email.split(' ')
       email_user.split(' ')
       senha_user = dados_cliente['Senha']
-      role = usuarioModel["role"]
       if (email == email_user and senha == senha_user ):
         print("acesso autorizado")
         self.email = email
         self.senha = senha
-        self.nome = usuarioModel["nome"]
-        if (role == 1):
-          return 1
-        elif(role == 2):
-          return 2
-        elif(role == 3):
-          return 3
-        break
+        self.nome = dados_cliente['Nome']
       else:
         print("acesso negado")
       
